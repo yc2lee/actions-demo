@@ -25,8 +25,7 @@ jobs:
       - name: Check out private repository code
         uses: actions/checkout@v2
         with:
-          repository: yc2lee/actions-demos-private
-          ref: master
-          path: ~/actions-demos-private
+          repository: yc2lee/actions-demo-private
+          path: ~/actions-demo-private
       - run: ls -l '*'
       - run: ls -l '~'
