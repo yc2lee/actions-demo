@@ -22,10 +22,11 @@ jobs:
       - run: env
       - name: Check out public repository code
         uses: actions/checkout@v2
-#      - name: Check out private repository code
-#        uses: actions/checkout@v2
-#        with:
-#          repository: yc2lee/actions-demo-private
-#          path: $HOME/actions-demo-private
-#          ssh-key: ${{ secrets.ACTIONS_DEMO_PRIVATE_KEY }}
+      - name: Check out private repository code
+        uses: actions/checkout@v2
+        with:
+          repository: yc2lee/actions-demo-private
+          path: actions-demo-private
+          ssh-key: ${{ secrets.ACTIONS_DEMO_PRIVATE_KEY }}
       - run: ls -l
+      - run: ls -l actions-demo-private
