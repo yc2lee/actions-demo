@@ -15,7 +15,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-  Environment Print:
+  Print-Environment:
     runs-on: ubuntu-latest
     steps:
       - name: Check out public repository code
@@ -23,7 +23,7 @@ jobs:
       - run: pwd
       - run: env
       - run: ls -l
-  Check System1:
+  Check-System1:
     runs-on: ubuntu-latest
     steps:
       - name: Check out private repository code
@@ -33,7 +33,7 @@ jobs:
           path: actions-demo-private
           ssh-key: ${{ secrets.ACTIONS_DEMO_PRIVATE_KEY }}
       - run: actions-demo-private/system1.sh
-  Check System2:
+  Check-System2:
     runs-on: ubuntu-latest
     steps:
       - name: Check out private repository code
