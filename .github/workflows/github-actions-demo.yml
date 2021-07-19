@@ -26,6 +26,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: yc2lee/actions-demo-private
+          ref: master
           path: ~/actions-demo-private
       - run: ls -l '*'
       - run: ls -l '~'
