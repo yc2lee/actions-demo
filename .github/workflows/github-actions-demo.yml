@@ -18,6 +18,11 @@ jobs:
   My-Other-Job:
     runs-on: ubuntu-latest
     steps:
-      - run: lsb_release -a
-      - run: sleep 10
-      - run: echo "I am very happy :)"
+      - uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.ACTIONS_DEMO_PRIVATE_KEY }}
+      - name: Check out private repository code
+        uses: actions/checkout@v2k
+        with:
+          repository: yc2lee/actions-demos-private
+      - run: ls -l '*'
